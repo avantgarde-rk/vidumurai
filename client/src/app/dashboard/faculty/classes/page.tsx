@@ -1,4 +1,5 @@
-'use client';
+"use client";
+export const dynamic = "force-dynamic";
 
 import MentorDashboardLayout from '@/components/MentorDashboardLayout';
 import HodDashboardLayout from '@/components/HodDashboardLayout';
