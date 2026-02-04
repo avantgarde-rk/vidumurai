@@ -4,7 +4,7 @@ export const dynamic = "force-dynamic";
 import { Suspense } from "react";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import { QrCode, Search, CheckCircle, XCircle, Clock } from "lucide-react";
+import { QrCode, Search, CheckCircle, XCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import api from "@/lib/api";
 
@@ -19,7 +19,7 @@ export default function VerifyPass() {
 
 /* INNER COMPONENT (REAL LOGIC) */
 function VerifyInner() {
-  const searchParams = useSearchParams();   // ✅ now inside Suspense
+  const searchParams = useSearchParams();   // ✅ SAFE HERE
   const urlId = searchParams.get("id");
 
   const [qrInput, setQrInput] = useState("");
